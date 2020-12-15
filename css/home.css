@@ -130,3 +130,8 @@
 .custom-checkbox .custom-control-input:active~.custom-control-label::before {
     background-color: #3a3a3a;
 }
+
+input.dark-theme-input:focus {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(58, 58, 58, 0.25);
+    border-color: rgba(58, 58, 58, 0.5);
+}
