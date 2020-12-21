@@ -135,3 +135,21 @@ input.dark-theme-input:focus {
     box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(58, 58, 58, 0.25);
     border-color: rgba(58, 58, 58, 0.5);
 }
+
+.card-columns {
+    @include media-breakpoint-only(lg) {
+        column-count: 4;
+    }
+    @include media-breakpoint-only(xl) {
+        column-count: 5;
+    }
+}
+
+.zoom-element {
+    transition: transform 400ms;
+    cursor: pointer;
+}
+
+.zoom-element:hover {
+    transform: scale(1.1);
+}
