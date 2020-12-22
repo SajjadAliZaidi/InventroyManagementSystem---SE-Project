@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IMS - NHMP | Products</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
     <link rel="stylesheet" href="/css/home.css">
 
@@ -16,10 +18,10 @@
     <header>
         <nav class="navbar navbar-expand-md navbar-dark fixed-top">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">Home</a>
+                <a class="navbar-brand" href="#">IMS - NHMP</a>
                 <ul class="navbar-nav me-auto mb-2 mb-md-0">
                     <li class="nav-item active">
-                        <a class="nav-link" aria-current="page" href="#">Logout</a>
+                        <a class="nav-link" aria-current="page" href="./index.html">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -30,278 +32,287 @@
     <div class="mt-5 mb-4 container card">
         <div class="card-body">
             <h1 class="card-header display-5" style="text-align: center auto;font-style: oblique;font-weight: bold;">Items</h1>
-            <br>
-            <div class="card-columns">
-
-                <!-- This is the div for an item -->
-                <div class="card">
-                    <img src="./img/AK-47.jpg" class="card-img-top" alt="item.png">
-                    <div class="card-body">
-                        <h5 class="card-title">AK 47</h5>
-                        <p class="card-text">This is the infamous AK 47</p>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-dark col-12 zoom-element" data-toggle="modal" data-target="#modalIssueItem">Issue Item</button>
-                        <div class="modal fade" id="modalIssueItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="inputBorrowerName">Borrower Name</label>
-                                                <input type="text" class="form-control" id="inputBorrowerName" placeholder="Enter Borrower's Name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputBorrowerCNIC">Borrower CNIC</label>
-                                                <input type="text" class="form-control" id="inputBorrowerCNIC" placeholder="Enter Borrower's CNIC">
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="mt-2 btn btn-secondary col-12 zoom-element" data-toggle="modal" data-target="#modalReturnItem">Return Item</button>
-                        <div class="modal fade" id="modalReturnItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Compensated</span>
-                                                    <div class="input-group-text">
-                                                        <input type="checkbox" id="checkboxCompensated" aria-label="Checkbox for following text input">
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="form-control" placeholder="Enter Compensation Amount here" aria-label="Text input with checkbox">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Fine</span>
-                                                    <div class="input-group-text">
-                                                        <input type="checkbox" id="checkboxFine" aria-label="Checkbox for following text input">
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="form-control" placeholder="Enter Fine Amount here" aria-label="Text input with checkbox">
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+            <div class="input-group mb-3 mt-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon1"><i class="fa fa-search" aria-hidden="true"></i>
+                    </span>
                 </div>
+                <input type="text" class="form-control" placeholder="Enter Item name" aria-label="Username" aria-describedby="basic-addon1">
+            </div>
 
-                <!-- This is the div for an item -->
-                <div class="card">
-                    <img src="./img/bullets.jpg" class="card-img-top" alt="item.png">
-                    <div class="card-body">
-                        <h5 class="card-title">AK 47 Bullets</h5>
-                        <p class="card-text">These are the bullets of AK 47</p>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-dark col-12 zoom-element" data-toggle="modal" data-target="#modalIssueItem">Issue Item</button>
-                        <div class="modal fade" id="modalIssueItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <div class="form-label-group">
+
+                <div class="card-columns">
+
+                    <!-- This is the div for an item -->
+                    <div class="card">
+                        <img src="./img/AK-47.jpg" class="card-img-top" alt="item.png">
+                        <div class="card-body">
+                            <h5 class="card-title">AK 47</h5>
+                            <p class="card-text">This is the infamous AK 47</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-dark col-12 zoom-element" data-toggle="modal" data-target="#modalIssueItem">Issue Item</button>
+                            <div class="modal fade" id="modalIssueItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="inputBorrowerName">Borrower Name</label>
+                                                    <input type="text" class="form-control" id="inputBorrowerName" placeholder="Enter Borrower's Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputBorrowerCNIC">Borrower CNIC</label>
+                                                    <input type="text" class="form-control" id="inputBorrowerCNIC" placeholder="Enter Borrower's CNIC">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
                                     </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="inputBorrowerName">Borrower Name</label>
-                                                <input type="text" class="form-control" id="inputBorrowerName" placeholder="Enter Borrower's Name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputBorrowerCNIC">Borrower CNIC</label>
-                                                <input type="text" class="form-control" id="inputBorrowerCNIC" placeholder="Enter Borrower's CNIC">
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                            <button class="mt-2 btn btn-secondary col-12 zoom-element" data-toggle="modal" data-target="#modalReturnItem">Return Item</button>
+                            <div class="modal fade" id="modalReturnItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Compensated</span>
+                                                        <div class="input-group-text">
+                                                            <input type="checkbox" id="checkboxCompensated" aria-label="Checkbox for following text input">
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Enter Compensation Amount here" aria-label="Text input with checkbox" disabled>
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Fine</span>
+                                                        <div class="input-group-text">
+                                                            <input type="checkbox" id="checkboxFine" aria-label="Checkbox for following text input">
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Enter Fine Amount here" aria-label="Text input with checkbox">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <button class="mt-2 btn btn-secondary col-12 zoom-element" data-toggle="modal" data-target="#modalReturnItem">Return Item</button>
-                        <div class="modal fade" id="modalReturnItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    </div>
+
+                    <!-- This is the div for an item -->
+                    <div class="card">
+                        <img src="./img/bullets.jpg" class="card-img-top" alt="item.png">
+                        <div class="card-body">
+                            <h5 class="card-title">AK 47 Bullets</h5>
+                            <p class="card-text">These are the bullets of AK 47</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-dark col-12 zoom-element" data-toggle="modal" data-target="#modalIssueItem">Issue Item</button>
+                            <div class="modal fade" id="modalIssueItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                   </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Compensated</span>
-                                                    <div class="input-group-text">
-                                                        <input type="checkbox" id="checkboxCompensated" aria-label="Checkbox for following text input">
-                                                    </div>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="inputBorrowerName">Borrower Name</label>
+                                                    <input type="text" class="form-control" id="inputBorrowerName" placeholder="Enter Borrower's Name">
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="Enter Compensation Amount here" aria-label="Text input with checkbox">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Fine</span>
-                                                    <div class="input-group-text">
-                                                        <input type="checkbox" id="checkboxFine" aria-label="Checkbox for following text input">
-                                                    </div>
+                                                <div class="form-group">
+                                                    <label for="inputBorrowerCNIC">Borrower CNIC</label>
+                                                    <input type="text" class="form-control" id="inputBorrowerCNIC" placeholder="Enter Borrower's CNIC">
                                                 </div>
-                                                <input type="text" class="form-control" placeholder="Enter Fine Amount here" aria-label="Text input with checkbox">
-                                            </div>
-                                        </form>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                            <button class="mt-2 btn btn-secondary col-12 zoom-element" data-toggle="modal" data-target="#modalReturnItem">Return Item</button>
+                            <div class="modal fade" id="modalReturnItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Compensated</span>
+                                                        <div class="input-group-text">
+                                                            <input type="checkbox" id="checkboxCompensated" aria-label="Checkbox for following text input">
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Enter Compensation Amount here" aria-label="Text input with checkbox" disabled>
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Fine</span>
+                                                        <div class="input-group-text">
+                                                            <input type="checkbox" id="checkboxFine" aria-label="Checkbox for following text input">
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Enter Fine Amount here" aria-label="Text input with checkbox" disabled>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- This is the div for an item -->
+                    <div class="card">
+                        <img src="./img/bulletproof-vest.jpg" class="card-img-top" alt="item.png">
+                        <div class="card-body">
+                            <h5 class="card-title">Bulletproof Vest</h5>
+                            <p class="card-text">This is a bulletproof vest</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-dark col-12 zoom-element" data-toggle="modal" data-target="#modalIssueItem">Issue Item</button>
+                            <div class="modal fade" id="modalIssueItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <label for="inputBorrowerName">Borrower Name</label>
+                                                    <input type="text" class="form-control" id="inputBorrowerName" placeholder="Enter Borrower's Name">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="inputBorrowerCNIC">Borrower CNIC</label>
+                                                    <input type="text" class="form-control" id="inputBorrowerCNIC" placeholder="Enter Borrower's CNIC">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="mt-2 btn btn-secondary col-12 zoom-element" data-toggle="modal" data-target="#modalReturnItem">Return Item</button>
+                            <div class="modal fade" id="modalReturnItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                  </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Compensated</span>
+                                                        <div class="input-group-text">
+                                                            <input type="checkbox" id="checkboxCompensated" aria-label="Checkbox for following text input">
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Enter Compensation Amount here" aria-label="Text input with checkbox">
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text">Fine</span>
+                                                        <div class="input-group-text">
+                                                            <input type="checkbox" id="checkboxFine" aria-label="Checkbox for following text input">
+                                                        </div>
+                                                    </div>
+                                                    <input type="text" class="form-control" placeholder="Enter Fine Amount here" aria-label="Text input with checkbox">
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-
-                <!-- This is the div for an item -->
-                <div class="card">
-                    <img src="./img/bulletproof-vest.jpg" class="card-img-top" alt="item.png">
-                    <div class="card-body">
-                        <h5 class="card-title">Bulletproof Vest</h5>
-                        <p class="card-text">This is a bulletproof vest</p>
-                    </div>
-                    <div class="card-footer">
-                        <button class="btn btn-dark col-12 zoom-element" data-toggle="modal" data-target="#modalIssueItem">Issue Item</button>
-                        <div class="modal fade" id="modalIssueItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="form-group">
-                                                <label for="inputBorrowerName">Borrower Name</label>
-                                                <input type="text" class="form-control" id="inputBorrowerName" placeholder="Enter Borrower's Name">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="inputBorrowerCNIC">Borrower CNIC</label>
-                                                <input type="text" class="form-control" id="inputBorrowerCNIC" placeholder="Enter Borrower's CNIC">
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <button class="mt-2 btn btn-secondary col-12 zoom-element" data-toggle="modal" data-target="#modalReturnItem">Return Item</button>
-                        <div class="modal fade" id="modalReturnItem" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                  </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <form>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Compensated</span>
-                                                    <div class="input-group-text">
-                                                        <input type="checkbox" id="checkboxCompensated" aria-label="Checkbox for following text input">
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="form-control" placeholder="Enter Compensation Amount here" aria-label="Text input with checkbox">
-                                            </div>
-                                            <div class="input-group mb-3">
-                                                <div class="input-group-prepend">
-                                                    <span class="input-group-text">Fine</span>
-                                                    <div class="input-group-text">
-                                                        <input type="checkbox" id="checkboxFine" aria-label="Checkbox for following text input">
-                                                    </div>
-                                                </div>
-                                                <input type="text" class="form-control" placeholder="Enter Fine Amount here" aria-label="Text input with checkbox">
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Save changes</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </div>
 
 
-    <style>
-        body {
-            background: #3a3a3a;
-            background: linear-gradient(to right, #464c52, #2f3238);
-        }
-        
-        .container {
-            border-radius: 25px;
-        }
-        
-        .restaurant-navigator {
-            text-decoration: none;
-            color: white;
-        }
-        
-        .restaurant-navigator:hover,
-        .restaurant-navigator:focus {
-            text-decoration: none;
-            color: white;
-        }
-    </style>
+        <style>
+            body {
+                background: #3a3a3a;
+                background: linear-gradient(to right, #464c52, #2f3238);
+            }
+            
+            .container {
+                border-radius: 25px;
+            }
+            
+            .restaurant-navigator {
+                text-decoration: none;
+                color: white;
+            }
+            
+            .restaurant-navigator:hover,
+            .restaurant-navigator:focus {
+                text-decoration: none;
+                color: white;
+            }
+        </style>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!-- <script>
+        <!-- <script>
         $('#myModal').on('shown.bs.modal', function() {
             $('#myInput').trigger('focus')
         })
