@@ -1,5 +1,5 @@
 # InventroyManagementSystem---SE-Project
-This is the code for a simple Police dept. Inventory Management System frontend. 
+This is the code for a simple Police dept. Inventory Management System frontend made as a university project.
 
 ## There are 5 main screens in this project
 
